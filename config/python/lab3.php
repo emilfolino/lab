@@ -58,7 +58,7 @@ $s2_listSent = [
 "The?grass?is?growing"
 ];
 $s2_listSent1		= $s2_listSent[rand_int(0, count($s2_listSent)-1)];
-$s2_smallInt1		= rand_int(1, 3);
+$s2_smallInt1		= rand_int(2, 5);
 $s2_smallInt2		= rand_int(5, 9);
 
 // SECTION 3
@@ -90,7 +90,7 @@ $s3_slice1ReplaceList = [
 ["book", "candle"],
 ["freezer", "fridge"],
 ["green", "purple"],
-["picture", "canvas"] 
+["picture", "canvas"]
 ];
 $s3_slice1Replace = $s3_slice1ReplaceList[rand_int(0, count($s3_slice1ReplaceList)-1)];
 $s3_slice1Answer = $s3_slice1Use;
@@ -172,16 +172,16 @@ EOD
 [
 
 "text" => <<<EOD
-Concatenate the two lists [$s1_shortList1Print] and [$s1_shortList2Print]. 
+Concatenate the two lists [$s1_shortList1Print] and [$s1_shortList2Print].
 
-Answer with your list. 
+Answer with your list.
 EOD
 ,
 
 "answer" => function () use ($s1_shortList1, $s1_shortList2) {
 	$result = array_merge($s1_shortList1, $s1_shortList2);
 	return $result;
-	
+
 },
 
 ],
@@ -281,7 +281,7 @@ EOD
 	$tempList = $s1_list2;
 	rsort($tempList);
 	return $tempList;
-	
+
 },
 
 ],
@@ -307,7 +307,7 @@ EOD
 	array_push($result, $s1_list1[1]);
 	array_push($result, $s1_list1[count($s1_list1)-1]);
 	return $result;
-	
+
 },
 
 ],
@@ -341,7 +341,7 @@ EOD
 		}
 	}
 	return $result;
-	
+
 },
 
 ],
@@ -532,9 +532,9 @@ Use slice on the list
 > [$s3_slice1PrintList]
 
 and replace the last two elements with
- 
+
 > "$s3_slice1PrintReplace"
- 
+
 Answer with the modified list.
 EOD
 ,
@@ -641,7 +641,7 @@ to a variable called 'list1'.
 
 Assign the list again, but to another variable called 'list2'.
 
-Answer with the result of 'list1 is list2'. 
+Answer with the result of 'list1 is list2'.
 EOD
 ,
 
@@ -750,8 +750,8 @@ EOD
     for($i = 0; $i < count($s2_numSerie3); $i++) {
     	$a[$i] = ($s2_numSerie3[$i] * 10);
     }
-    sort($a);    
-    
+    sort($a);
+
     return $a; //implode(",",$a);
 },
 
